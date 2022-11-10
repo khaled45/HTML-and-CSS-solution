@@ -1,0 +1,244 @@
+:root {
+    --white: #fafafa;
+    --gray: #696969;
+    --black: #141414;
+    --fontSize: 15px;
+    --weight500: 500;
+    --weight700: 700;
+    --borderRadius: 10px;
+    /* --box-shadow: 0px 0px 30px -15px rgba(20, 20, 20, 0.68); */
+    --box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@300;700&family=Quicksand:wght@300&display=swap");
+* {
+    font-family: "Epilogue", sans-serif;
+    font-size: var(--fontSize);
+    background-color: var(--white);
+    color: var(--black);
+}
+
+body {
+    padding: 0px !important;
+    margin: 0px !important;
+    background-color: var(--white);
+}
+
+#navbar {
+    background-color: var(--white);
+    font-weight: var(--weight700);
+}
+
+#nabar button {
+    font-weight: var(--weight700) !important;
+}
+
+/* dropDown menus styles */
+
+#navbar .dropdown-menu {
+    margin: 0px;
+    padding: 15px 10px;
+    border: 0px;
+    box-shadow: var(--box-shadow);
+    /* list-style-image: url(./images/favicon-32x32.png); */
+}
+
+#navbarSupportedContent[aria-modal="true"] .dropdown-menu {
+    box-shadow: none;
+    background-color: var(--white);
+    padding-top: 0px;
+}
+
+#navbarSupportedContent[aria-modal="true"] .dropdown-menu .dropdown-item {
+    background-color: var(--white);
+}
+
+#navbar .dropdown-toggle::after {
+    content: url(./images/icon-arrow-down.svg);
+    border: 0px;
+    vertical-align: 0px;
+}
+
+#navbar .dropdown-toggle[aria-expanded="true"]::after {
+    content: url(./images/icon-arrow-up.svg);
+}
+
+#navbar .dropdown-menu .dropdown-item {
+    background-color: #fff;
+    padding: 10px 5px;
+}
+
+#navbar .dropdown-menu .dropdown-item img {
+    padding-right: 15px;
+    background-color: transparent;
+}
+
+#navbar .dropdown-menu .dropdown-item:hover {
+    background-color: var(--white);
+    border-radius: var(--borderRadius);
+}
+
+/* navbar list styles */
+
+#navbar .nav-link {
+    margin: 0px 10px;
+    font-size: 15px;
+    font-weight: var(--weight700);
+}
+
+#navbarSupportedContent {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--white) !important;
+}
+
+#navbarSupportedContent[aria-modal="true"] {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 20px 20px 20px;
+    width: 60% !important;
+    text-align: left !important;
+}
+
+.offcanvas-header {
+    flex-direction: row-reverse;
+    padding-right: 0px !important;
+}
+
+/* navbar buttons styles */
+
+#navbar .buttons button {
+    font-weight: var(--weight700);
+    color: var(--gray) !important;
+    margin: 0px 15px;
+}
+
+#navbar .buttons button:hover {
+    color: var(--black) !important;
+}
+
+#navbar .buttons .register {
+    border-radius: var(--borderRadius);
+    border: solid 1px var(--gray);
+}
+
+#navbar .buttons .login:focus {
+    border: 0px;
+}
+
+#navbar .buttons .login::-moz-focus-outer {
+    border: 0px;
+}
+
+#navbarSupportedContent[aria-modal="true"] .buttons {
+    display: flex;
+    flex-direction: column !important;
+}
+
+/* Toggle style */
+
+#navbar .navbar-toggler {
+    border: none;
+    background: none;
+    color: var(--gray);
+}
+
+/* First Section Banner */
+
+#banner {
+    background-color: var(--white);
+}
+
+#banner .ContentBanner {
+    padding: 0px 2rem;
+    align-content: flex-end;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#banner .ContentBanner h1 {
+    font-size: 6em !important;
+    font-weight: bold;
+    line-height: 6rem;
+    color: var(--black);
+}
+
+#banner .ContentBanner p {
+    font-weight: var(--weight500);
+    color: var(--gray);
+    line-height: 2rem;
+    font-size: 20px;
+    width: 90%;
+}
+
+#banner .ContentBanner button {
+    color: var(--white);
+    background-color: var(--black);
+    border: 2px solid var(--black);
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+#banner .ContentBanner button:hover {
+    color: var(--black);
+    background-color: var(--white);
+}
+
+#banner .ContentBanner .list-group li {
+    display: block !important;
+}
+
+#banner .imageBanner {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+#banner .imageBanner picture img {
+    height: 90%;
+    width: 90%;
+}
+
+#banner .ContentBanner ul {
+    flex-direction: row;
+    column-gap: 50px;
+}
+
+#banner .ContentBanner ul li {
+    width: 20%;
+    height: auto;
+}
+
+@media (max-width: 992px) {
+    #banner {
+        flex-direction: column-reverse !important;
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+    #banner .imageBanner {
+        width: 100%;
+    }
+    #banner .imageBanner {
+        width: 100% !important;
+    }
+    #banner .ContentBanner {
+        width: 100% !important;
+    }
+    #banner br {
+        display: none;
+    }
+    #banner .ContentBanner h1 {
+        font-size: 2.5em !important;
+        font-weight: bold;
+        color: var(--black);
+        line-height: normal;
+        margin-top: 3rem;
+    }
+    #banner .ContentBanner ul {
+        column-gap: 20px;
+        margin: 30px 0px;
+    }
+    #banner .ContentBanner ul li img {
+        width: 90%;
+    }
+}
